@@ -1,0 +1,29 @@
+<h1>능력 상품 추가하기</h1>
+
+<form action="" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <label for="powername">상품명:</label>
+  <input type="text" id="powername" name="powername">
+
+  <br><br>
+  <label for="context">소개:</label>
+  <textarea name="context" rows="4" cols="50"></textarea>
+
+  <br><br>
+  <div>
+    <label for="category">카테고리 선택:</label>
+    <select name="category">
+      <option value="level 1">level 1</option>
+      <option value="level 2">level 2</option>
+      <option value="level 3">level 3</option>
+    </select>
+  </div>
+
+  <br><br>
+  <label for="file">파일 업로드:</label>
+  <input type="file" id="file" name="file">
+
+
+  <input type="submit" value="제출">
+
+</form>

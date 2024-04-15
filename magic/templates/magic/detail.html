@@ -1,0 +1,6 @@
+<h1>{{category.name}}</h1>
+{% for power in category.power_set.all %}
+<ul>
+  <li><a href="{% url 'magic:power_detail' power.pk %}">{{power.name}}</a></li>
+</ul>
+{% endfor %}

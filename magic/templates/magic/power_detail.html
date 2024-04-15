@@ -1,0 +1,8 @@
+<h1>{{power.name}}</h1>
+<img src="{{power.image_url}}" width="50%" height="50%"><br>
+{{power.description}}
+
+<br>
+<form action="{% url 'magic:delete' power.pk %}">
+  <input type="submit" value="삭제">
+</form>

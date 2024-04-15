@@ -1,0 +1,11 @@
+<h1>어서오세요!</h1>
+
+<a href="{% url 'magic:add_product' %}">제품등록</a>
+
+{% if category %}
+<ul>
+  {% for cate in category %}
+  <li><a href="{% url 'magic:detail' cate.pk %}">{{cate.name}}</a></li>
+  {% endfor %}
+</ul>
+{% endif %}
